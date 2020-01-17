@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Card from './components/molecules/Card';
+import Home from './containers/Home';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Card/>
+        <Home/>
       </div>
     )
   }

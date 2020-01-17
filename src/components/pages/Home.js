@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import Card from './components/molecules/Card';
+import Card from './../molecules/Card';
 
 class App extends Component {
+  onCardClick = () => {
+    const { fetchCardDetails } = this.props;
+    fetchCardDetails();
+  }
   render() {
+    const { displayMessage } = this.props;
     return (
       <div>
-        <Card/>
+        <Card onClick={ this.onCardClick } cardDetails={ displayMessage }/>
       </div>
     )
   }

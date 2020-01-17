@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 
 const CardContainer = styled.div`
@@ -41,8 +41,9 @@ const CTA = styled.button`
   border-radius: 30px;
 `
 
-class Card extends Component {
+class Card extends PureComponent {
   render() {
+    const { onClick, cardDetails } = this.props;
     return (
       <CardContainer>
         <CardHeader>
@@ -50,9 +51,9 @@ class Card extends Component {
         </CardHeader>
         <CardBody>
           <CardContent>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi ipsum fugiat? Ducimus earum non facilis ea dolore ipsam eius, minima ab maxime tenetur architecto, hic a sed enim minus.
+            { cardDetails || 'Click on CTA' }
           </CardContent>
-          <CTA>Click Here</CTA>
+          <CTA onClick={onClick}>Click Here</CTA>
         </CardBody>
       </CardContainer>
     )
