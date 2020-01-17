@@ -2,7 +2,7 @@ import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { AXIOS_INSTANCE, checkStatus } from '../utils/api';
 import * as config from '../config/dev.config';
 
-export function* fetchDetail(action) {
+export function* fetchDetail() {
   try {
     const axiosInstance = AXIOS_INSTANCE(config.cardDetails);
     const { status, data} = yield call(axiosInstance);
@@ -15,10 +15,10 @@ export function* fetchDetail(action) {
       });
     }
   } catch (error) {
-    return {
-      status: 'GET_CARD_DETAILS_FAILURE',
-      data: error,
-    };
+    yield put({
+      type: 'GET_CARD_DETAILS_FAILURE',
+      payload: {data: 'Error in fetch'},
+    });
   }
 }
 
