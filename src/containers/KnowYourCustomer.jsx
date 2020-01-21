@@ -3,11 +3,9 @@ import { bindActionCreators } from 'redux';
 import KnowYourCustomer from '../components/pages/KnowYourCustomer';
 // import { reduxForm } from 'redux-form';
 
-// import { fetchCardDetails } from './../actions/home';
 // const formName = "Home";
 const mapStateToProps = state => {
   return {
-    displayMessage: state.register.displayMessage
   }
 };
 

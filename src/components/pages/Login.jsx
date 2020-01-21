@@ -11,7 +11,7 @@ class Login extends Component {
   };
 
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, userVerified } = this.props;
     return (
       <div className="login">
         <div className="login-header">
