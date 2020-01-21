@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Card from '../../../components/molecules/Card';
+import UserCard from '../../../components/molecules/UserCard';
 
-describe('Card', () => {
+describe('User Card', () => {
   it('should render card', () => {
-    const wrapper = shallow(<Card />);
+    const wrapper = shallow(<UserCard />);
     expect(wrapper).toMatchSnapshot();
   });
 });
