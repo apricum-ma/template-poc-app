@@ -7,7 +7,6 @@ import Deposit from '../components/pages/Deposit';
 // const formName = "Home";
 const mapStateToProps = state => {
   return {
-    displayMessage: state.register.displayMessage
   }
 };
 

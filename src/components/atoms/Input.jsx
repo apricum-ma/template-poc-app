@@ -49,16 +49,16 @@ class Input extends Component {
         {!noLabel && (
             <label
               htmlFor={id}
-              className={labelClass}
+              className={`input-group__label ${labelClass}`}
             >
               {label}
             </label>
           )}
-        <div className="c-input-group">
+        <div className="input-group">
           <input
             id={id}
             {...input}
-            className={`c-input-group__input ${touched && invalid && 'error'}`}
+            className={`input-group__input ${touched && invalid && 'error'}`}
             type={type}
             readOnly={readOnly}
             maxLength={maxLength}

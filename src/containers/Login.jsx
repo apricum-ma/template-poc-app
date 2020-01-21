@@ -7,7 +7,8 @@ import { userLogin } from './../actions/login';
 const formName = "Login";
 const mapStateToProps = state => {
   return {
-    displayMessage: state.register.displayMessage
+    updateRoute: state.login.updateRoute,
+    accountNumber: state.login.accountNumber
   }
 };
 

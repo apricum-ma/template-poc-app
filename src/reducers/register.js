@@ -1,14 +1,12 @@
 const initialState = {
-  displayMessage: ''
+  accountNumber: ''
 }
 const registerReducer = (state = initialState, action = {}) => {
-  if(action.type === 'GET_CARD_DETAILS_SUCCESS'){
+  if(action.type === 'REGISTER_USER_SUCCESS'){
     return { ...state,
-      displayMessage:action.payload.data };
-  }
-  if(action.type === 'GET_CARD_DETAILS_FAILURE'){
-    return { ...state,
-      displayMessage:action.payload.data };
+      accountNumber:action.payload.accountNumber,
+      updateRoute: true
+    };
   }
   return initialState;
 }

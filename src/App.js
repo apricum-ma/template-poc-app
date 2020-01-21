@@ -13,7 +13,7 @@ import Login from './containers/Login';
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="app container-fluid">
       <div className="row">
         <Header/>
         <Switch>
