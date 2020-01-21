@@ -13,7 +13,7 @@ const CardContainer = styled.div`
   transition: all .2s ease-in-out;
   cursor: pointer;
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 `
 

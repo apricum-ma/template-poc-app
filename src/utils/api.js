@@ -1,13 +1,15 @@
 import axios from 'axios';
 
 // axios instance
-export const AXIOS_INSTANCE = baseURL =>
+export const AXIOS_INSTANCE = (baseURL, accessToken) =>
   axios.create({
     baseURL,
     timeout: 120000,
     headers: {
-      'Content-Type': 'application/json',
-    },
+      'content-type': 'application/json;',
+      'Access-Control-Allow-Origin': '*',
+      'authorization': `Bearer ${accessToken}`,
+    }
   });
 
 export const parseJSON = response => {

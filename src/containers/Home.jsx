@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Home from './../components/pages/Home';
-import { fetchCardDetails } from './../actions/home';
+import { reduxForm } from 'redux-form';
 
+import { fetchCardDetails } from './../actions/home';
+const formName = "Home";
 const mapStateToProps = state => {
   return {
     displayMessage: state.home.displayMessage
@@ -15,4 +17,9 @@ const mapDispatchToProps = dispatch => {
 	}, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export const RegForm = reduxForm({
+  form: formName,
+  destroyOnUnmount: false,
+})(Home);
+
+export default connect(mapStateToProps, mapDispatchToProps)(RegForm);
