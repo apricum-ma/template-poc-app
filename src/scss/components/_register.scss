@@ -1,0 +1,41 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-header {
+  flex-basis: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-header__logo {
+  background-color: $dark-green;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+
+.signup__form-button {
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 400px), screen and (min-height: 700px) {
+  .signup-header {
+    flex-basis: 200px;
+  }
+  .signup {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-height: 400px) {
+  .signup-header {
+    flex-basis: 0;
+  }
+}

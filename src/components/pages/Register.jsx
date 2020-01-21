@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import Input from '../atoms/Input';
 import Button from '../atoms/Button';
+import Logo from "../../assets/images/logo.png";
 class Register extends Component {
   registerUserHandler = values => {
     const { registerUser } = this.props;
@@ -18,63 +19,56 @@ class Register extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <div className="register col col-sm-12">
-        <form className="register__form col col-md-6 offset-md-6" onSubmit={handleSubmit(this.registerUserHandler)}>
+      <div className="signup">
+        <div className="signup-header">
+          <div className="signup-header__logo">
+            <img alt="logo" src={Logo} />
+          </div>
+        </div>
+        <form className="signup__form" onSubmit={handleSubmit(this.registerUserHandler)}>
           <Field
             id="firstName"
             component={Input}
             type="text"
-            label="First Name"
             name="firstName"
-            className="register-field col-md-6 col-lg-6"
-            placeholder="Enter your First Name"
+            placeholder="First Name"
           />
           <Field
             id="lastName"
             component={Input}
             type="text"
-            label="Last Name"
             name="lastName"
-            className="register-field col-md-6 col-lg-6"
-            placeholder="Enter your Last Name"
+            placeholder="Last Name"
           />
           <Field
             id="emailId"
             component={Input}
             type="email"
-            label="Email"
             name="emailId"
-            className="register-field col-md-6 col-lg-6"
-            placeholder="Enter your Email ID"
+            placeholder="Email ID"
           />
           <Field
             id="phoneNumber"
             component={Input}
             type="text"
-            label="Phone Number"
             name="phone"
-            className="register-field col-md-6 col-lg-6"
-            placeholder="Enter your Phone Number"
+            placeholder="Phone Number"
           />
           <Field
             id="userName"
             component={Input}
             type="text"
-            label="User Name"
             name="userName"
-            className="register-field col-md-6 col-lg-6"
-            placeholder="Enter your Username"
+            placeholder="Username"
           />
           <Field
             id="password"
             component={Input}
             type="password"
-            label="Password"
             name="password"
-            className="register-field col-md-6 col-lg-6"
-            placeholder="Enter your Password"
+            placeholder="Password"
           />
-          <Button>
+          <Button className="signup__form-button primary-button">
             Register
           </Button>
         </form>
