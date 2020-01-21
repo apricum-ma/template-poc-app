@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Input extends Component {
   state = {
-    hasValue: !!this.props.input.defaultValue,
+    hasValue: this.props.input && !!this.props.input.defaultValue,
   };
 
   setInput = (e, callback) => {
@@ -44,7 +45,7 @@ class Input extends Component {
 
     const labelClass = `${hasValue && 'is-active'}`;
     return (
-      <div className={`o-component ${className}`}>
+      <div className={`${className}`}>
         {!noLabel && (
             <label
               htmlFor={id}
@@ -82,5 +83,59 @@ class Input extends Component {
     );
   }
 }
+
+Input.propTypes = {
+  readOnly: PropTypes.bool,
+  noLabel: PropTypes.bool,
+  type: PropTypes.string,
+  label: PropTypes.string,
+  id: PropTypes.string,
+  value: PropTypes.string,
+  className: PropTypes.string,
+  input: PropTypes.shape({
+    onBlur: PropTypes.func,
+    onKeyUp: PropTypes.func,
+    defaultValue: PropTypes.string,
+  }),
+  placeholder: PropTypes.string,
+  maxLength: PropTypes.number,
+  title: PropTypes.string,
+  autoComplete: PropTypes.string,
+  meta: PropTypes.shape({
+    touched: PropTypes.bool,
+    invalid: PropTypes.bool,
+    pristine: PropTypes.bool,
+    visited: PropTypes.bool,
+    error: PropTypes.string,
+  }),
+  dataEvent: PropTypes.string,
+  dataValue: PropTypes.string,
+  ariaLabel: PropTypes.string,
+  ariaRequired: PropTypes.bool,
+};
+
+Input.defaultProps = {
+  type: 'text',
+  label: '',
+  id: 'name',
+  value: '',
+  placeholder: ' ',
+  meta: null,
+  input: {
+    onBlur: () => {},
+    onKeyUp: () => {},
+    defaultValue: '',
+  },
+  className: '',
+  readOnly: false,
+  maxLength: 100,
+  noLabel: false,
+  title: '',
+  autoComplete: 'off',
+  dataEvent: null,
+  dataValue: null,
+  ariaLabel: '',
+  ariaRequired: false,
+};
 
 export default Input;

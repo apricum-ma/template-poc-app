@@ -1,0 +1,9 @@
+.user-card {
+  &__number {
+    display: flex;
+  }
+  &__input {
+    max-width: 50px;
+    margin: 0 20px;
+  }
+}

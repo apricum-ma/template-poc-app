@@ -1,25 +1,25 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Home from './../components/pages/Home';
+import Register from '../components/pages/Register';
 import { reduxForm } from 'redux-form';
 
-import { fetchCardDetails } from './../actions/home';
-const formName = "Home";
+import { registerUser } from '../actions/register';
+const formName = "Register";
 const mapStateToProps = state => {
   return {
-    displayMessage: state.home.displayMessage
+    displayMessage: state.register.displayMessage
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
-		fetchCardDetails
+		registerUser
 	}, dispatch);
 }
 
 export const RegForm = reduxForm({
   form: formName,
   destroyOnUnmount: false,
-})(Home);
+})(Register);
 
 export default connect(mapStateToProps, mapDispatchToProps)(RegForm);

@@ -7,7 +7,7 @@ import KnowYourCustomer from '../components/pages/KnowYourCustomer';
 // const formName = "Home";
 const mapStateToProps = state => {
   return {
-    displayMessage: state.home.displayMessage
+    displayMessage: state.register.displayMessage
   }
 };
 

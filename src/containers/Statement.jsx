@@ -7,7 +7,7 @@ import Statemnet from '../components/pages/Statement';
 // const formName = "Home";
 const mapStateToProps = state => {
   return {
-    displayMessage: state.home.displayMessage
+    displayMessage: state.register.displayMessage
   }
 };
 

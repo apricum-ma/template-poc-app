@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Button from '../atoms/Button';
-import Card from '../molecules/Card';
+import UserCard from '../molecules/UserCard';
 
-class AddCard extends Component {
+class AddAccount extends Component {
   state = {
     showDefaultCard: false
   }
-  addCard = () => {
+  addAccount = () => {
     this.setState({ showDefaultCard: true });
   }
 
@@ -16,11 +16,11 @@ class AddCard extends Component {
   render() {
     const { showDefaultCard } = this.state;
     return <div>
-        AddCard
-        <Button onClick={this.addCard}> Add Card </Button>
-        { showDefaultCard && <Card onClick={this.saveCard}/>}
+        Add Account
+        <Button onClick={this.addAccount}> Add Account </Button>
+        { showDefaultCard && <UserCard onClick={this.saveCard}/>}
     </div>
   }
 }
 
-export default AddCard;
+export default AddAccount;

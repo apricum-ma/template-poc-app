@@ -1,7 +1,7 @@
 const initialState = {
   displayMessage: ''
 }
-const homeReducer = (state = initialState, action = {}) => {
+const registerReducer = (state = initialState, action = {}) => {
   if(action.type === 'GET_CARD_DETAILS_SUCCESS'){
     return { ...state,
       displayMessage:action.payload.data };
@@ -13,4 +13,4 @@ const homeReducer = (state = initialState, action = {}) => {
   return initialState;
 }
 
-export default homeReducer;
+export default registerReducer;

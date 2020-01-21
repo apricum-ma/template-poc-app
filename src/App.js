@@ -1,23 +1,31 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
-import Home from './containers/Home';
+import Register from './containers/Register';
 import KnowYourCustomer from './containers/KnowYourCustomer';
-import AddCard from './containers/AddCard';
+import AddAccount from './containers/AddAccount';
 import Deposit from './containers/Deposit';
 import Transfer from './containers/Transfer';
 import Statement from './containers/Statement';
+import Error from './components/pages/Error';
+import Header from './components/molecules/Header';
+import Login from './containers/Login';
 
-import NotFound from './components/pages/NotFound';
 class App extends Component {
   render() {
     return (
       <div className="container">
-      <div className="row justify-content-md-center">
+      <div className="row">
+        <Header/>
         <Switch>
           <Route
             exact
             path="/"
-            render={props => <Home {...props}/>}
+            render={props => <Login {...props}/>}
+          />
+          <Route
+            exact
+            path="/register"
+            render={props => <Register {...props}/>}
           />
           <Route
             exact
@@ -26,8 +34,8 @@ class App extends Component {
           />
           <Route
             exact
-            path="/add-card"
-            render={props => <AddCard {...props}/>}
+            path="/add-account"
+            render={props => <AddAccount {...props}/>}
           />
           <Route
             exact
@@ -46,8 +54,8 @@ class App extends Component {
           />
           <Route
             exact
-            path="/not-found"
-            render={props => <NotFound {...props}/>}
+            path="/error"
+            render={props => <Error {...props}/>}
           />
         </Switch>
       </div>

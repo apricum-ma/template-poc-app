@@ -4,7 +4,7 @@ class NotFound extends Component {
   render() {
     return (
       <div>
-          this the second page
+          Something went wrong! Please try again later.
       </div>
     )
   }

@@ -1,7 +1,9 @@
-import { cardSaga } from './fetchCardDetailsSaga';
+import { userReg } from './registerUserSaga';
+import { userLogin } from './loginSaga';
 
 const rootSaga = {
-  cardSaga,
+  userReg,
+  userLogin
 };
 
 export default rootSaga;

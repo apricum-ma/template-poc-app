@@ -1,4 +1,5 @@
 module.exports = {
-  cardDetails: 'https://api.myjson.com/bins/1adng6'
+  baseUrl: 'http://35.232.4.118/app',
+  userRegistration: 'http://35.232.4.118/register'
 };
   

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import Transfer from '../components/pages/Transfer';
 const mapStateToProps = state => {
   return {
-    displayMessage: state.home.displayMessage
+    displayMessage: state.register.displayMessage
   }
 };
 
