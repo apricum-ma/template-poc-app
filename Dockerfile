@@ -5,7 +5,6 @@ COPY ./ /apps/demo
 WORKDIR /apps/demo
 
 RUN npm install
-RUN npm rebuild node-sass
 
 EXPOSE 9001
 
