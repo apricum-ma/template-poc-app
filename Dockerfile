@@ -11,10 +11,6 @@ RUN pwd
 
 WORKDIR /root/workspace
 
-RUN apt-get -y update --print-uris && apt-get -y upgrade --print-uris
-
-RUN apt-get -y update
-
 RUN npm i -g n
 
 RUN n 10.16.0
