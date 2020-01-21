@@ -43,22 +43,11 @@ class Input extends Component {
 
     const touched = meta && meta.touched;
 
-    const labelClass = `${hasValue && 'is-active'}`;
     return (
-      <div className={`${className}`}>
-        {!noLabel && (
-            <label
-              htmlFor={id}
-              className={labelClass}
-            >
-              {label}
-            </label>
-          )}
-        <div className="c-input-group">
           <input
             id={id}
             {...input}
-            className={`c-input-group__input ${touched && invalid && 'error'}`}
+            className={`input-box ${touched && invalid && 'error'}`}
             type={type}
             readOnly={readOnly}
             maxLength={maxLength}
@@ -78,8 +67,6 @@ class Input extends Component {
             data-value={dataValue}
             aria-required={ariaRequired}
           />
-        </div>
-      </div>
     );
   }
 }

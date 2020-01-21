@@ -13,8 +13,7 @@ import Login from './containers/Login';
 class App extends Component {
   render() {
     return (
-      <div className="container">
-      <div className="row">
+      <div className="app">
         <Header/>
         <Switch>
           <Route
@@ -58,7 +57,6 @@ class App extends Component {
             render={props => <Error {...props}/>}
           />
         </Switch>
-      </div>
       </div>
     )
   }

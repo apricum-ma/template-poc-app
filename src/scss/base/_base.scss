@@ -1,0 +1,38 @@
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: arial, verdana, sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: #5b5b5b;
+}
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background: $white-1;
+  min-height: 100%;
+  margin: 50px;
+  background-attachment: fixed;
+  letter-spacing: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+img {
+  max-width: 100%;
+}
