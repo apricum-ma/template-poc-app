@@ -7,7 +7,7 @@ import AddAccount from '../components/pages/AddAccount';
 // const formName = "Home";
 const mapStateToProps = state => {
   return {
-    displayMessage: state.home.displayMessage
+    displayMessage: state.register.displayMessage
   }
 };
 
