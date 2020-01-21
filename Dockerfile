@@ -39,7 +39,7 @@ RUN npm run build
 
 RUN npm i -g react-scripts
 
-RUN react-scripts test --watchAll --forceExit
+# RUN react-scripts test --watchAll --forceExit
 
 CMD [ "node_modules/http-server/bin/http-server", "-p", "9001", "build/" ]
 
