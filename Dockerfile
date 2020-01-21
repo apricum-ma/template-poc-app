@@ -7,14 +7,12 @@ WORKDIR /apps/demo
 RUN npm install
 RUN npm rebuild node-sass
 
-RUN npm install http-server
-
 EXPOSE 9001
 
 RUN npm run build
 
 RUN react-scripts test --watchAll=false
 
-CMD [ "node_modules/http-server/bin/http-server", "-p", "9001", "build/" ]
+CMD [ "http-server", "-p", "9001", "build/" ]
 
  
