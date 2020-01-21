@@ -8,7 +8,7 @@ const formName = "Login";
 const mapStateToProps = state => {
   return {
     updateRoute: state.login.updateRoute,
-    accountNumber: state.login.accountNumber
+    custNumber: state.login.custNumber
   }
 };
 

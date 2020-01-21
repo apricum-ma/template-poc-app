@@ -8,7 +8,7 @@ const registerReducer = (state = initialState, action = {}) => {
       updateRoute: true
     };
   }
-  return initialState;
+  return state;
 }
 
 export default registerReducer;

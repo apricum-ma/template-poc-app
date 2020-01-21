@@ -8,7 +8,7 @@ const initialState = {
         ...action.payload
       };
     }
-    return initialState;
+    return state;
   }
   
   export default loginReducer;

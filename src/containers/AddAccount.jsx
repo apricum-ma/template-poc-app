@@ -1,18 +1,26 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import AddAccount from '../components/pages/AddAccount';
-// import { reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 
-// import { fetchCardDetails } from './../actions/home';
-// const formName = "Home";
+import { addAccount } from './../actions/addAccount';
+const formName = "AddAccount";
 const mapStateToProps = state => {
   return {
+    token: state.login.token,
+    custNumber: state.login.custNumber
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
+    addAccount
 	}, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddAccount);
+export const AddAccForm = reduxForm({
+  form: formName,
+  destroyOnUnmount: false,
+})(AddAccount);
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddAccForm);

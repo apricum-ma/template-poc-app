@@ -11,9 +11,8 @@ class Login extends Component {
   };
 
   componentDidUpdate = prevProps => {
-    const { updateRoute, history, accountNumber } = this.props;
+    const { updateRoute, history } = this.props;
     if(updateRoute && updateRoute !== prevProps.updateRoute){
-      console.log(accountNumber);
       history.push('/add-account');
     }
   }
