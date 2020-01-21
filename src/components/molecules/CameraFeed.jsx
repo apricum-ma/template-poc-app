@@ -31,6 +31,7 @@ class CameraFeed extends Component {
    * @override
    */
   async componentDidMount() {
+    console.log(navigator, navigator.mediaDevices)
     const cameras = await navigator.mediaDevices.enumerateDevices();
     this.processDevices(cameras);
   }
