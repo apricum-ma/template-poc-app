@@ -13,7 +13,7 @@ EXPOSE 9001
 
 RUN npm run build
 
-# RUN react-scripts test --watchAll --forceExit
+RUN react-scripts test --watchAll=false
 
 CMD [ "node_modules/http-server/bin/http-server", "-p", "9001", "build/" ]
 
